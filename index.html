@@ -6,17 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cado Streaming - Filmes e séries online</title>
     <script src="https://kit.fontawesome.com/d349635840.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header id="start">
-        <img src="img/logo.jpg" alt="logo">
-        <nav>
-            <a href="#start">Inicio</a>
-            <span>Categorias <i class="fa-solid fa-caret-down"></i></span>
-        </nav>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-user"></i>
-        <span>User</span>
+    <header class="header" id="start">
+        <div class="div">
+            <img class="img-header" src="img/logo.jpg" alt="logo">
+            <nav>
+                <a href="#start">Inicio</a>
+                <span>Categorias <i class="fa-solid fa-caret-down"></i></span>
+            </nav>
+        </div>
+        <div class=>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-user"></i>
+            <span>User</span>
+        </div>
     </header>
+    <main>
+        <section class="add-film">
+            <h1>Adicionar filmes</h1>
+            <div>
+                <label>Gênero do filme</label><br>
+                <input type="radio" name="genre" value="Ação" checked>Ação
+                <input type="radio" name="genre" value="Animação">Animação
+                <input type="radio" name="genre" value="Comédia">Comédia
+                <input type="radio" name="genre" value="Romance">Romance
+                <input type="radio" name="genre" value="Terror">Terror
+            </div>
+            <div>
+                <label for="name">Nome do filme</label>
+                <input type="text" id="name" class="film">
+            </div>
+            <div>
+                <label for="poster">Poster</label>
+                <input type="text" id="poster" class="film">
+            </div>
+            <div>
+                <label for="description">Descrição</label>
+                <input type="text" id="description" class="film">
+            </div>
+            <button onclick="film()">Enviar</button>
+        </section>
+    </main>
 </body>
 </html>
