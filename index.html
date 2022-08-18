@@ -8,6 +8,9 @@
     <script src="https://kit.fontawesome.com/d349635840.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header" id="start">
@@ -21,33 +24,67 @@
         <div class=>
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-solid fa-user"></i>
-            <span>User</span>
+            <span class="user">User</span>
         </div>
     </header>
     <main>
         <section class="add-film">
-            <h1>Adicionar filmes</h1>
-            <div>
-                <label>Gênero do filme</label><br>
-                <input type="radio" name="genre" value="Ação" checked>Ação
-                <input type="radio" name="genre" value="Animação">Animação
-                <input type="radio" name="genre" value="Comédia">Comédia
-                <input type="radio" name="genre" value="Romance">Romance
-                <input type="radio" name="genre" value="Terror">Terror
+            <div class="film-container">
+                <h1>Adicionar filmes</h1>
+                <div class="flex-menu">
+                    <div>
+                        <label for="name">Nome do filme</label><br>
+                        <input type="text" id="name" class="film" placeholder="Insira o nome do filme" required>
+                    </div>
+                    <div>
+                        <label for="poster">Poster</label><br>
+                        <input type="text" id="poster" class="film" placeholder="Insira a url da imagem" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="description">Descrição</label><br>
+                    <input type="text" id="description" class="film" placeholder="Insira a descrição do filme" required>
+                </div>
+                <div class="genre-menu">
+                    <label>Gênero do filme</label><br><br>
+                    <input class="radio-btn" type="radio" name="genre" value="action" checked> Ação
+                    <input class="radio-btn" type="radio" name="genre" value="animation"> Animação
+                    <input class="radio-btn" type="radio" name="genre" value="comedy"> Comédia
+                    <input class="radio-btn" type="radio" name="genre" value="romance"> Romance
+                    <input class="radio-btn" type="radio" name="genre" value="horror"> Terror
+                </div><br>
+                <button onclick="addMovie()">Enviar</button>
             </div>
-            <div>
-                <label for="name">Nome do filme</label>
-                <input type="text" id="name" class="film">
+        </section>
+        <section class="action">
+            <h1>Filmes de ação</h1>
+            <div class="action-container">
+                
             </div>
-            <div>
-                <label for="poster">Poster</label>
-                <input type="text" id="poster" class="film">
+        </section>
+        <section class="animation">
+            <h1>Filmes de animação</h1>
+            <div class="animation-container">
+                
             </div>
-            <div>
-                <label for="description">Descrição</label>
-                <input type="text" id="description" class="film">
+        </section>
+        <section class="comedy">
+            <h1>Filmes de comédia</h1>
+            <div class="comedy-container">
+                
             </div>
-            <button onclick="film()">Enviar</button>
+        </section>
+        <section class="romance">
+            <h1>Filmes de romance</h1>
+            <div class="romance-container">
+                
+            </div>
+        </section>
+        <section class="horror">
+            <h1>Filmes de Terror</h1>
+            <div class="horror-container">
+                
+            </div>
         </section>
     </main>
 </body>
