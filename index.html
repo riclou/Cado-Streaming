@@ -17,7 +17,7 @@
         <div class="div">
             <img class="img-header" src="img/logo.jpg" alt="logo">
             <nav>
-                <a href="#start">Inicio</a>
+                <a href="#inicio">Inicio</a>
                 <span>Categorias <i class="fa-solid fa-caret-down"></i></span>
             </nav>
         </div>
@@ -27,63 +27,83 @@
             <span class="user">User</span>
         </div>
     </header>
-    <main>
-        <section class="add-film">
-            <div class="film-container">
-                <h1>Adicionar filmes</h1>
-                <div class="flex-menu">
-                    <div>
-                        <label for="name">Nome do filme</label><br>
-                        <input type="text" id="name" class="film" placeholder="Insira o nome do filme" required>
-                    </div>
-                    <div>
-                        <label for="poster">Poster</label><br>
-                        <input type="text" id="poster" class="film" placeholder="Insira a url da imagem" required>
-                    </div>
+    <form class="add-film content" id="inicio">
+        <div class="film-container">
+            <h1>Adicionar filmes</h1>
+            <div class="flex-menu">
+                <div>
+                    <label for="name">Nome do filme</label><br>
+                    <input type="text" id="name" class="film" placeholder="Insira o nome do filme" required>
                 </div>
                 <div>
-                    <label for="description">Descrição</label><br>
-                    <input type="text" id="description" class="film" placeholder="Insira a descrição do filme" required>
+                    <label for="description">Link Trailer</label><br>
+                    <input type="text" id="link" class="film" placeholder="Insira a descrição do filme" required>
                 </div>
-                <div class="genre-menu">
-                    <label>Gênero do filme</label><br><br>
-                    <input class="radio-btn" type="radio" name="genre" value="action" checked> Ação
-                    <input class="radio-btn" type="radio" name="genre" value="animation"> Animação
-                    <input class="radio-btn" type="radio" name="genre" value="comedy"> Comédia
-                    <input class="radio-btn" type="radio" name="genre" value="romance"> Romance
-                    <input class="radio-btn" type="radio" name="genre" value="horror"> Terror
-                </div><br>
-                <button onclick="addMovie()">Enviar</button>
             </div>
-        </section>
-        <section class="action">
+            <div>
+                <label for="poster">Poster</label>
+                <input type="url" id="poster" class="film" placeholder="Insira a url da imagem" required>
+            </div>
+            <div class="genre-menu">
+                <label>Gênero do filme</label><br><br>
+                <input class="radio-btn" type="radio" name="genre" value="action" checked> Ação
+                <input class="radio-btn" type="radio" name="genre" value="animation"> Animação
+                <input class="radio-btn" type="radio" name="genre" value="comedy"> Comédia
+                <input class="radio-btn" type="radio" name="genre" value="romance"> Romance
+                <input class="radio-btn" type="radio" name="genre" value="horror"> Terror
+            </div><br>
+            <button onclick="addMovie()">Enviar</button>
+        </div>
+    </form>
+    <main>
+        <section class="action default">
             <h1>Filmes de ação</h1>
-            <div class="action-container">
-                
+            <div class="action-container default">
+                <img src="img/action/1.jpg" alt="Poster image">
+                <img src="img/action/2.jpg" alt="Poster image">
+                <img src="img/action/3.jpg" alt="Poster image">
+                <img src="img/action/4.jpg" alt="Poster image">
+                <img src="img/action/5.jpg" alt="Poster image">
             </div>
         </section>
-        <section class="animation">
+        <section class="animation default">
             <h1>Filmes de animação</h1>
-            <div class="animation-container">
-                
+            <div class="animation-container default">
+                <img src="img/animação/1.jpg" alt="Poster image">
+                <img src="img/animação/2.jpg" alt="Poster image">
+                <img src="img/animação/3.jpg" alt="Poster image">
+                <img src="img/animação/4.jpg" alt="Poster image">
+                <img src="img/animação/5.jpg" alt="Poster image">
             </div>
         </section>
-        <section class="comedy">
+        <section class="comedy default">
             <h1>Filmes de comédia</h1>
-            <div class="comedy-container">
-                
+            <div class="comedy-container default">
+                <img src="img/comedy/1.jpg" alt="Poster image">
+                <img src="img/comedy/2.jpg" alt="Poster image">
+                <img src="img/comedy/3.jpg" alt="Poster image">
+                <img src="img/comedy/4.jpg" alt="Poster image">
+                <img src="img/comedy/5.jpg" alt="Poster image">
             </div>
         </section>
-        <section class="romance">
+        <section class="romance default">
             <h1>Filmes de romance</h1>
-            <div class="romance-container">
-                
+            <div class="romance-container default">
+                <img src="img/romance/1.jpg" alt="Poster image">
+                <img src="img/romance/2.jpg" alt="Poster image">
+                <img src="img/romance/3.jpg" alt="Poster image">
+                <img src="img/romance/4.jpg" alt="Poster image">
+                <img src="img/romance/5.jpg" alt="Poster image">
             </div>
         </section>
-        <section class="horror">
+        <section class="horror default">
             <h1>Filmes de Terror</h1>
-            <div class="horror-container">
-                
+            <div class="horror-container default">
+                <img src="img/terror/1.jpg " alt="Poster image">
+                <img src="img/terror/2.jpg" alt="Poster image">
+                <img src="img/terror/3.jpg" alt="Poster image">
+                <img src="img/terror/4.jpg" alt="Poster image">
+                <img src="img/terror/5.jpg" alt="Poster image">
             </div>
         </section>
     </main>
