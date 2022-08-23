@@ -56,3 +56,32 @@ function addMovie(){
     poster.value = ""
     link.value = ""
 }
+
+const genreSelect = document.getElementById('category-content'),
+    category = document.querySelector('.categoria')
+
+
+category.addEventListener("mouseover", function(){
+    genreSelect.style.display = 'block'
+
+    })
+
+genreSelect.addEventListener("mouseover", function(){
+    genreSelect.style.display = 'block'
+
+})
+genreSelect.addEventListener("mouseout", function(){
+    genreSelect.style.display = 'none'
+})
+
+
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+  });

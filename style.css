@@ -65,10 +65,29 @@ nav a:hover{
 .div{
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 .img-header{
     width: 5rem;
     border-radius: 100%;
+}
+.category-content{
+    display: block;
+    position: fixed;
+    width: 30%;
+    height: 40vh;
+    top: 15%;
+    background-color: var(--theme);
+    z-index: 2;
+}
+.list-genre a{
+    display: flex;
+    flex-direction: column;
+    text-indent: 2rem;
+    line-height: 1.8rem;
+    color: rgb(218, 218, 216);
+    font-family: var(--fontPara);
+    letter-spacing: 0.1rem;
 }
 .add-film{
     background-image: url(img/desktop.jfif);
@@ -82,6 +101,15 @@ nav a:hover{
 main{
     width: 100%;
 }
+.search{
+    height: 2rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+}
+.search:focus{
+    outline: 2px solid #0471A6;
+}
 .film-container{
     padding: 2rem;
     color: var(--colorWords);
@@ -91,9 +119,16 @@ main{
 }
 .film{
     height: 1.8rem;
+    padding: 1rem;
     text-indent: 5px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 0.8rem;
+    border: none;
+    outline: none;
+    width: 12rem;
+}
+.film:focus{
+    outline: 2px solid #0471A6;
 }
 .flex-menu{
     display: flex;
@@ -155,4 +190,17 @@ button:hover{
 .default img:hover{  
     transform: translateY(0) scale(1.2);
     border-radius: 5px;
+}
+.modal{
+    position: none;
+}
+.active-modal{
+    display: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    background-color: var(--theme);
+    color: var(--colorWords);
+    padding: 3rem;
 }

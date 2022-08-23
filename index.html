@@ -13,36 +13,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header" id="start">
+    <header class="header Inicio" id="start">
         <div class="div">
             <img class="img-header" src="img/logo.jpg" alt="logo">
             <nav>
                 <a href="#inicio">Inicio</a>
-                <span>Categorias <i class="fa-solid fa-caret-down"></i></span>
+                <span class="categoria">Categorias <i class="fa-solid fa-caret-down categoria"></i></span>
+                <div class="category-content" id="category-content">
+                    <span>Gêneros:</span>
+                    <nav class="list-genre">
+                        <a href="#action">Ação</a>
+                        <a href="#animation">Animação</a>
+                        <a href="#comedy">Comédia</a>
+                        <a href="#romance">Romance</a>
+                        <a href="#horror">Terror</a>
+                    </nav>
+                </div>
             </nav>
         </div>
-        <div class=>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-user"></i>
-            <span class="user">User</span>
+        <div class="div">
+            <input type="text" class="search" placeholder="Procure pelo nome do filme">
+            <i class="fa-solid fa-user user"></i>
         </div>
     </header>
-    <form class="add-film content" id="inicio">
+    <section class="add-film content" id="inicio">
         <div class="film-container">
             <h1>Adicionar filmes</h1>
             <div class="flex-menu">
                 <div>
                     <label for="name">Nome do filme</label><br>
-                    <input type="text" id="name" class="film" placeholder="Insira o nome do filme" required>
+                    <input type="text" id="name" class="film" placeholder="Insira o nome do filme" autofocus>
                 </div>
                 <div>
-                    <label for="description">Link Trailer</label><br>
-                    <input type="text" id="link" class="film" placeholder="Insira a descrição do filme" required>
+                    <label for="link">Link Trailer</label><br>
+                    <input type="text" id="link" class="film" placeholder="Insira a descrição do filme">
                 </div>
             </div>
             <div>
                 <label for="poster">Poster</label>
-                <input type="url" id="poster" class="film" placeholder="Insira a url da imagem" required>
+                <input type="text" id="poster" class="film" placeholder="Insira a url da imagem">
             </div>
             <div class="genre-menu">
                 <label>Gênero do filme</label><br><br>
@@ -54,58 +63,60 @@
             </div><br>
             <button onclick="addMovie()">Enviar</button>
         </div>
-    </form>
+    </section>
     <main>
-        <section class="action default">
+        <section id="action" class="action default">
             <h1>Filmes de ação</h1>
             <div class="action-container default">
-                <img src="img/action/1.jpg" alt="Poster image">
-                <img src="img/action/2.jpg" alt="Poster image">
-                <img src="img/action/3.jpg" alt="Poster image">
-                <img src="img/action/4.jpg" alt="Poster image">
-                <img src="img/action/5.jpg" alt="Poster image">
+                <img src="img/action/1.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/action/2.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/action/3.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/action/4.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/action/5.jpg" alt="Poster image" class="openModal closeModal">
             </div>
         </section>
-        <section class="animation default">
+        <section id="animation" class="animation default">
             <h1>Filmes de animação</h1>
             <div class="animation-container default">
-                <img src="img/animação/1.jpg" alt="Poster image">
-                <img src="img/animação/2.jpg" alt="Poster image">
-                <img src="img/animação/3.jpg" alt="Poster image">
-                <img src="img/animação/4.jpg" alt="Poster image">
-                <img src="img/animação/5.jpg" alt="Poster image">
+                <img src="img/animação/1.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/animação/2.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/animação/3.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/animação/4.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/animação/5.jpg" alt="Poster image" class="openModal closeModal">
             </div>
         </section>
-        <section class="comedy default">
+        <section id="comedy" class="comedy default">
             <h1>Filmes de comédia</h1>
             <div class="comedy-container default">
-                <img src="img/comedy/1.jpg" alt="Poster image">
-                <img src="img/comedy/2.jpg" alt="Poster image">
-                <img src="img/comedy/3.jpg" alt="Poster image">
-                <img src="img/comedy/4.jpg" alt="Poster image">
-                <img src="img/comedy/5.jpg" alt="Poster image">
+                <img src="img/comedy/1.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/comedy/2.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/comedy/3.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/comedy/4.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/comedy/5.jpg" alt="Poster image" class="openModal closeModal">
             </div>
         </section>
-        <section class="romance default">
+        <section id="romance" class="romance default">
             <h1>Filmes de romance</h1>
             <div class="romance-container default">
-                <img src="img/romance/1.jpg" alt="Poster image">
-                <img src="img/romance/2.jpg" alt="Poster image">
-                <img src="img/romance/3.jpg" alt="Poster image">
-                <img src="img/romance/4.jpg" alt="Poster image">
-                <img src="img/romance/5.jpg" alt="Poster image">
+                <img src="img/romance/1.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/romance/2.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/romance/3.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/romance/4.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/romance/5.jpg" alt="Poster image" class="openModal closeModal">
             </div>
         </section>
-        <section class="horror default">
+        <section id="horror" class="horror default">
             <h1>Filmes de Terror</h1>
             <div class="horror-container default">
-                <img src="img/terror/1.jpg " alt="Poster image">
-                <img src="img/terror/2.jpg" alt="Poster image">
-                <img src="img/terror/3.jpg" alt="Poster image">
-                <img src="img/terror/4.jpg" alt="Poster image">
-                <img src="img/terror/5.jpg" alt="Poster image">
+                <img src="img/terror/1.jpg " alt="Poster image" class="openModal closeModal">
+                <img src="img/terror/2.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/terror/3.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/terror/4.jpg" alt="Poster image" class="openModal closeModal">
+                <img src="img/terror/5.jpg" alt="Poster image" class="openModal closeModal">
             </div>
         </section>
+        <div class="modal"></div>
+        <div id="modal-overlay"></div>
     </main>
 </body>
 </html>
