@@ -85,3 +85,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
   });
+
+  const search = document.getElementById('search'),
+  inputSearch = document.querySelector('.input-search')
+
+  function searchFilter(){
+    inputSearch.innerHTML = "<input type='text' class='search-filter' placeholder='Procure pelo nome do filme'>"
+  }

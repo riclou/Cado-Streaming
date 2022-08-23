@@ -75,10 +75,11 @@ nav a:hover{
     display: block;
     position: fixed;
     width: 30%;
-    height: 40vh;
+    height: 30vh;
     top: 15%;
     background-color: var(--theme);
     z-index: 2;
+    min-width: 12rem;
 }
 .list-genre a{
     display: flex;
@@ -106,6 +107,41 @@ main{
     padding: 1rem;
     border: none;
     outline: none;
+    min-width: none;
+}
+.search:focus{
+    outline: 2px solid #0471A6;
+}
+.fa-magnifying-glass{
+    display: none;
+}
+.search-filter{
+    position:fixed;
+    right: 0;
+    top: 15%;
+    z-index: 2;
+    height: 2rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    min-width: none;
+}
+@media (max-width: 650px) {
+    .search{
+        display: none;
+    }
+    .fa-magnifying-glass{
+        display: block;
+        cursor: pointer;
+    }
+    .fa-magnifying-glass:hover{
+        color: var(--WordsHover);
+    }
+}
+@media (min-width: 650px) {
+    .search-filter{
+        display: none;
+    }
 }
 .search:focus{
     outline: 2px solid #0471A6;
